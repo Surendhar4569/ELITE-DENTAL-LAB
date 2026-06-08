@@ -1,5 +1,14 @@
 import { motion } from 'framer-motion';
 import { FaTooth, FaCrown, FaTeethOpen, FaShieldAlt } from 'react-icons/fa';
+import crownBridgesImage from '../assets/Services_Images/Crown and Bridges Work.jpg';
+import galvanoImage from '../assets/Services_Images/Galvano Crown.png';
+import veneersImage from '../assets/Services_Images/Laminate Veneers.jpg';
+import inlaysImage from '../assets/Services_Images/Inlays & Onlays.jpg';
+import zirconiaImage from '../assets/Services_Images/Zirconia Crown Bridges.png';
+import implantsImage from '../assets/Services_Images/Implants and Attachments.jpg';
+import removableImage from '../assets/Services_Images/Removable Prosthetics.png';
+import splintsImage from '../assets/Services_Images/Splints.png';
+import snoringImage from '../assets/Services_Images/Snoring Device.png';
 
 const serviceItems = [
   'Crown and Bridges Work',
@@ -26,7 +35,7 @@ const servicesDetail = [
     id: 'crowns',
     title: 'Crown and Bridges Work',
     description: 'Porcelain fused to metal restorations that exhibit true opalescence and natural fluorescence. These restorations are designed to deliver exceptional strength, beautiful shading, and lasting fit.',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: crownBridgesImage,
     subSections: [
       { title: 'Metal High Precious', items: ['DeguDent G (yellow gold)', 'DeguDent U (white gold)'] },
       { title: 'Metal Semi Precious', items: ['DeguDent DEVA4® (white gold)'] },
@@ -37,56 +46,56 @@ const servicesDetail = [
     id: 'galvano',
     title: 'Galvano Crown',
     description: 'Electroforming technology from Heraeus Kulzer using the Preciano IQ machine for highly accurate, biocompatible copings with outstanding fit and longevity.',
-    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: galvanoImage,
     subSections: []
   },
   {
     id: 'veneers',
     title: 'Laminate Veneers',
     description: 'Pure porcelain restorations delivering natural-looking esthetics. Our laminate veneers are crafted for thin, durable coverage that enhances smiles with lifelike translucency.',
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: veneersImage,
     subSections: []
   },
   {
     id: 'inlays',
     title: 'Inlays & Onlays',
     description: 'Indirect inlays and onlays fabricated with porcelain or composite resin provide patients with natural-looking esthetic results and reinforce tooth structure. The durable materials used in these restorations can last up to 30 years, much longer than conventional fillings.',
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: inlaysImage,
     subSections: []
   },
   {
     id: 'zirconia',
     title: 'Zirconia Crown & Bridges',
     description: 'Free metal work to exceed your expectations with Zirconia.',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: zirconiaImage,
     features: ['Superior esthetics', 'Highest flexural strength (1400 Mpa)', 'Highest translucency', 'Suitable for implant abutments and bridges up to 14 units', 'Suitable for all kinds of preparation']
   },
   {
     id: 'implants',
     title: 'Implants and Attachments',
     description: 'Our ability to integrate clinical work and lab aspects of implant dentistry ensures confident, predictable results. Our experienced implant staff will work with you at every step, from case planning through construction of the prosthetic appliance.',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: implantsImage,
     suppliers: ['Bredent', 'Bego', 'Nobel Biocare', 'Straumann', 'SEMADOS', 'BIOHORIZONS', 'Lifecore Dental', 'THOMMEN', '3I']
   },
   {
     id: 'removable',
     title: 'Removable Prosthetics',
     description: 'We support case planning, design, and estimation so there are no surprises for you or your patient. Predictable and profitable treatment begins with careful planning.',
-    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: removableImage,
     items: ['Titanium Frame', 'Chrome Cobalt Frame & Acrylic', 'Galvano Plate', 'Flexible Acrylic', 'Telescopic bars', 'Telescopic crowns']
   },
   {
     id: 'splints',
     title: 'Splints',
     description: 'Custom splints built for patient comfort, stabilization, and long-term durability.',
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: splintsImage,
     items: ['Horseshoe Splint', 'Impact Splint', 'Hard/Soft Splint', 'Pankey Splint']
   },
   {
     id: 'snoring',
     title: 'Snoring Device',
     description: 'A comfortable and effective oral appliance solution for snoring and sleep-disordered breathing.',
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: snoringImage,
     features: ['Comfortable', 'Healthy sleep', 'Natural breathing', 'Soft and flexible material', 'Non-toxic material']
   }
 ];

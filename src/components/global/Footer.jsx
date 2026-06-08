@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFax, FaWhatsapp, FaArrowRight, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import EliteLogo from '../../assets/Elite_logo.png';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -24,7 +25,7 @@ export default function Footer() {
       {/* Decorative top border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
       
-      <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6 pt-8 pb-8">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-12 gap-8 lg:gap-12 mb-12">
           {/* Brand Column */}
@@ -35,9 +36,13 @@ export default function Footer() {
             viewport={{ once: true }}
             className="md:col-span-4"
           >
-            <h2 className="text-2xl font-display font-bold text-white mb-4">
-              Elite <span className="text-secondary">Dental Lab</span>
-            </h2>
+            <Link to="/" className="inline-flex items-center">
+              <img
+                src={EliteLogo}
+                alt="Elite Dental Lab logo"
+                className="h-24 md:h-28 w-auto object-contain"
+              />
+            </Link>
             <p className="text-sm text-gray-400 leading-relaxed mb-4">
               Made for the Elite. Exceeding patients' expectations by providing the best quality services since 2002.
             </p>

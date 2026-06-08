@@ -3,11 +3,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import EliteLogo from '../../assets/Elite_logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -15,7 +16,7 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     
     const savedDarkMode = localStorage.getItem('darkMode');
-    if (savedDarkMode) {
+    if (savedDarkMode !== null) {
       setDarkMode(savedDarkMode === 'true');
     }
     
@@ -42,8 +43,8 @@ export default function Navbar() {
   ];
 
   const navClass = scrolled
-    ? 'bg-white/95 dark:bg-dark/95 backdrop-blur-md shadow-sm py-3'
-    : 'bg-white/80 dark:bg-dark/50 backdrop-blur-sm py-5';
+    ? 'bg-white/95 dark:bg-dark/95 backdrop-blur-md shadow-sm py-0'
+    : 'bg-white/80 dark:bg-dark/50 backdrop-blur-sm py-2';
 
   return (
     <motion.nav 
@@ -56,11 +57,13 @@ export default function Navbar() {
         {/* Logo Placeholder */}
         <Link 
           to="/" 
-          className="group"
+          className="flex items-center"
         >
-          <span className="text-xl md:text-2xl font-display font-bold text-primary dark:text-white">
-            Elite <span className="text-secondary">Dental Lab</span>
-          </span>
+          <img
+            src={EliteLogo}
+            alt="Elite Dental Lab logo"
+            className="h-20 md:h-24 w-auto object-contain block"
+          />
         </Link>
 
         {/* Desktop Navigation */}
