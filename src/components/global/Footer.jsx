@@ -24,12 +24,12 @@ export default function Footer() {
     <footer className="bg-dark text-gray-300 relative">
       {/* Decorative top border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
-      
+
       <div className="max-w-7xl mx-auto px-6 pt-8 pb-8">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-12 gap-8 lg:gap-12 mb-12">
           {/* Brand Column */}
-          <motion.div 
+          <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -49,25 +49,25 @@ export default function Footer() {
             <p className="text-sm text-gray-500 leading-relaxed">
               Visit our clinic or request a consultation to learn how we can support your practice with premium restorations.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex gap-3 mt-6">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-9 h-9 rounded-full bg-gray-800 hover:bg-secondary flex items-center justify-center transition-all duration-300 group"
                 aria-label="Facebook"
               >
                 <FaFacebookF className="text-gray-400 group-hover:text-white text-sm transition-colors" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-9 h-9 rounded-full bg-gray-800 hover:bg-secondary flex items-center justify-center transition-all duration-300 group"
                 aria-label="Instagram"
               >
                 <FaInstagram className="text-gray-400 group-hover:text-white text-sm transition-colors" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-9 h-9 rounded-full bg-gray-800 hover:bg-secondary flex items-center justify-center transition-all duration-300 group"
                 aria-label="LinkedIn"
               >
@@ -77,7 +77,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Quick Links Column */}
-          <motion.div 
+          <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -92,8 +92,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    to={link.path} 
+                  <Link
+                    to={link.path}
                     className="text-sm text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <FaArrowRight className="text-secondary text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -107,7 +107,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Contact Column */}
-          <motion.div 
+          <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -127,22 +127,45 @@ export default function Footer() {
                   </div>
                   <span className="text-sm text-gray-400 leading-relaxed">P.O BOX: 46000, Abu Dhabi - UAE</span>
                 </div>
-                <div className="flex items-center gap-3 group">
-                  <div className="w-8 h-8 rounded-lg bg-gray-800 group-hover:bg-secondary/20 flex items-center justify-center flex-shrink-0 transition-colors">
-                    <FaPhoneAlt className="text-secondary text-sm" />
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center gap-3 group">
+                    <div className="w-8 h-8 rounded-lg bg-gray-800 group-hover:bg-secondary/20 flex items-center justify-center flex-shrink-0 transition-colors">
+                      <FaPhoneAlt className="text-secondary text-sm" />
+                    </div>
+
+                    <div className="text-sm text-gray-400">
+                      <a
+                        href="tel:+971586887793"
+                        className="hover:text-secondary transition-colors"
+                      >
+                        +971 586887793
+                      </a>
+                      <span className="mx-1">, </span>
+                      <a
+                        href="tel:+97126765576"
+                        className="hover:text-secondary transition-colors"
+                      >
+                        +971 26765576
+                      </a>
+                    </div>
                   </div>
-                  <a href="tel:+97126765576" className="text-sm text-gray-400 hover:text-secondary transition-colors">
-                    +971 2 6765576
-                  </a>
                 </div>
                 <div className="flex items-center gap-3 group">
                   <div className="w-8 h-8 rounded-lg bg-gray-800 group-hover:bg-secondary/20 flex items-center justify-center flex-shrink-0 transition-colors">
                     <FaFax className="text-secondary text-sm" />
                   </div>
-                  <span className="text-sm text-gray-400">+971 2 6769967</span>
+                  <span className="text-sm text-gray-400">+971 26769967</span>
                 </div>
               </div>
               <div className="space-y-3">
+                <div className="flex items-center gap-3 group">
+                  <div className="w-8 h-8 rounded-lg bg-gray-800 group-hover:bg-secondary/20 flex items-center justify-center flex-shrink-0 transition-colors">
+                    <FaEnvelope className="text-secondary text-sm" />
+                  </div>
+                  <a href="mailto:account@elitedentaluae.com" className="text-sm text-gray-400 hover:text-secondary transition-colors break-all">
+                    account@elitedentaluae.com
+                  </a>
+                </div>
                 <div className="flex items-center gap-3 group">
                   <div className="w-8 h-8 rounded-lg bg-gray-800 group-hover:bg-secondary/20 flex items-center justify-center flex-shrink-0 transition-colors">
                     <FaEnvelope className="text-secondary text-sm" />
@@ -165,7 +188,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <motion.div 
+        <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

@@ -48,20 +48,20 @@ export default function Contact() {
   return (
     <div ref={ref} className="pt-32 pb-28 bg-white dark:bg-dark relative min-h-screen">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
-      
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -right-32 w-96 h-96 bg-secondary/3 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <motion.div 
+        <motion.div
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           className="text-center mb-16"
         >
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, letterSpacing: "8px" }}
             animate={{ opacity: 1, letterSpacing: "4px" }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -79,13 +79,13 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
             className="space-y-6"
           >
-            <motion.div 
+            <motion.div
               variants={fadeUp}
               className="bg-gray-50 dark:bg-dark/30 rounded-2xl p-6 border-l-4 border-secondary hover:shadow-md transition-all duration-300"
             >
@@ -101,8 +101,8 @@ export default function Contact() {
                 </div>
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               variants={fadeUp}
               className="bg-gray-50 dark:bg-dark/30 rounded-2xl p-6 border-l-4 border-secondary/80 hover:shadow-md transition-all duration-300"
             >
@@ -112,13 +112,13 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-primary dark:text-white mb-2">Phone & Fax</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Tel: <span className="font-medium">+971 2 6765576</span></p>
-                  <p className="text-gray-600 dark:text-gray-400">Fax: <span className="font-medium">+971 2 6769967</span></p>
+                  <p className="text-gray-600 dark:text-gray-400">Tel: <span className="font-medium">+971 586887793, +971 26765576</span></p>
+                  <p className="text-gray-600 dark:text-gray-400">Fax: <span className="font-medium">+971 26769967</span></p>
                 </div>
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={fadeUp}
               className="bg-gray-50 dark:bg-dark/30 rounded-2xl p-6 border-l-4 border-secondary/60 hover:shadow-md transition-all duration-300"
             >
@@ -128,7 +128,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-primary dark:text-white mb-2">Email</h3>
-                  <a href="mailto:saadalzarif81@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors">
+                  <a href="mailto:account@elitedentaluae.com" className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors block mt-1">
+                    account@elitedentaluae.com
+                  </a>
+                  <a href="mailto:saadalzarif81@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors block">
                     saadalzarif81@gmail.com
                   </a>
                 </div>
@@ -147,7 +150,7 @@ export default function Contact() {
               <h3 className="text-xl font-bold text-primary dark:text-white">Request Consultation</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Submit your details and we'll respond within 24 hours</p>
             </div>
-            
+
             <form onSubmit={handleSubmit} className="p-6 space-y-5">
               {/* Contact Person */}
               <div>
@@ -156,8 +159,8 @@ export default function Contact() {
                 </label>
                 <div className="relative">
                   <FaUserMd className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm" />
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     name="contactPerson"
                     value={formData.contactPerson}
                     onChange={handleChange}
@@ -176,8 +179,8 @@ export default function Contact() {
                   </label>
                   <div className="relative">
                     <FaPhoneAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm" />
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
@@ -193,8 +196,8 @@ export default function Contact() {
                   </label>
                   <div className="relative">
                     <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm" />
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
@@ -205,7 +208,7 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Message */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
@@ -213,7 +216,7 @@ export default function Contact() {
                 </label>
                 <div className="relative">
                   <FaClipboardList className="absolute left-3 top-4 text-gray-400 text-sm" />
-                  <textarea 
+                  <textarea
                     name="message"
                     rows="5"
                     value={formData.message}
@@ -224,9 +227,9 @@ export default function Contact() {
                   ></textarea>
                 </div>
               </div>
-              
-              <button 
-                type="submit" 
+
+              <button
+                type="submit"
                 className="w-full bg-primary hover:bg-secondary text-white py-3.5 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group"
               >
                 {formSubmitted ? (
@@ -241,7 +244,7 @@ export default function Contact() {
                   </>
                 )}
               </button>
-              
+
               <p className="text-xs text-center text-gray-400 dark:text-gray-500 mt-4">
                 We'll contact you within 24 hours to discuss your inquiry.
               </p>
@@ -258,12 +261,12 @@ export default function Contact() {
           className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800"
         >
           <div className="relative h-96">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462118.02491053584!2d54.30066073347948!3d24.452718253411206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440a26be17b3%3A0x8cd6a0e7c3f4d5e5!2sAbu%20Dhabi!5e0!3m2!1sen!2sae!4v1698765432100!5m2!1sen!2sae" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462118.02491053584!2d54.30066073347948!3d24.452718253411206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440a26be17b3%3A0x8cd6a0e7c3f4d5e5!2sAbu%20Dhabi!5e0!3m2!1sen!2sae!4v1698765432100!5m2!1sen!2sae"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
               loading="lazy"
               title="Elite Dental Lab Location"
               className="w-full h-full"
