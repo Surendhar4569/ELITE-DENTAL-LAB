@@ -14,7 +14,7 @@ export default function FloatingActions() {
   return (
     <>
       <motion.a 
-        href="https://wa.me/97126765576" target="_blank" 
+        href="https://wa.me/971586887793" target="_blank" 
         className="fixed bottom-6 left-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition-colors"
         whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
       >

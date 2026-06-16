@@ -25,6 +25,10 @@ export default function Contact() {
     message: ''
   });
 
+  const mapAddress = "Elite Dental Fabrication Lab, galleria cafe bluiding - 201 شارع دلما - Al Nahyan - E25 - Abu Dhabi - United Arab Emirates";
+  const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapAddress)}&output=embed`;
+  const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`;
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
@@ -96,7 +100,14 @@ export default function Contact() {
                 <div>
                   <h3 className="text-lg font-bold text-primary dark:text-white mb-2">Location</h3>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    P.O BOX: 46000, Abu Dhabi - UAE
+                    <a
+                      href={mapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-secondary transition-colors break-words"
+                    >
+                      {mapAddress}
+                    </a>
                   </p>
                 </div>
               </div>
@@ -128,8 +139,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-primary dark:text-white mb-2">Email</h3>
-                  <a href="mailto:account@elitedentaluae.com" className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors block mt-1">
-                    account@elitedentaluae.com
+                  <a href="mailto:admin@elitedentaluae.com" className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors block mt-1">
+                    admin@elitedentaluae.com
                   </a>
                   <a href="mailto:saadalzarif81@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors block">
                     saadalzarif81@gmail.com
@@ -262,7 +273,7 @@ export default function Contact() {
         >
           <div className="relative h-96">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462118.02491053584!2d54.30066073347948!3d24.452718253411206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440a26be17b3%3A0x8cd6a0e7c3f4d5e5!2sAbu%20Dhabi!5e0!3m2!1sen!2sae!4v1698765432100!5m2!1sen!2sae"
+              src={mapEmbedSrc}
               width="100%"
               height="100%"
               style={{ border: 0 }}

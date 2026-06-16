@@ -53,26 +53,32 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex gap-3 mt-6">
               <a
-                href="#"
+                href="https://share.google/itLOI3085BSP0FxLc"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-800 hover:bg-secondary flex items-center justify-center transition-all duration-300 group"
                 aria-label="Facebook"
               >
                 <FaFacebookF className="text-gray-400 group-hover:text-white text-sm transition-colors" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/elitedental.lab?igsh=bTJ6bXczcjNxZ2Vp"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-800 hover:bg-secondary flex items-center justify-center transition-all duration-300 group"
                 aria-label="Instagram"
               >
                 <FaInstagram className="text-gray-400 group-hover:text-white text-sm transition-colors" />
               </a>
-              <a
-                href="#"
+              {/* <a
+                href="https://www.linkedin.com/company/your-company"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-800 hover:bg-secondary flex items-center justify-center transition-all duration-300 group"
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn className="text-gray-400 group-hover:text-white text-sm transition-colors" />
-              </a>
+              </a> */}
             </div>
           </motion.div>
 
@@ -162,8 +168,8 @@ export default function Footer() {
                   <div className="w-8 h-8 rounded-lg bg-gray-800 group-hover:bg-secondary/20 flex items-center justify-center flex-shrink-0 transition-colors">
                     <FaEnvelope className="text-secondary text-sm" />
                   </div>
-                  <a href="mailto:account@elitedentaluae.com" className="text-sm text-gray-400 hover:text-secondary transition-colors break-all">
-                    account@elitedentaluae.com
+                  <a href="mailto:admin@elitedentaluae.com" className="text-sm text-gray-400 hover:text-secondary transition-colors break-all">
+                    admin@elitedentaluae.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3 group">
@@ -172,14 +178,6 @@ export default function Footer() {
                   </div>
                   <a href="mailto:saadalzarif81@gmail.com" className="text-sm text-gray-400 hover:text-secondary transition-colors break-all">
                     saadalzarif81@gmail.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-3 group">
-                  <div className="w-8 h-8 rounded-lg bg-gray-800 group-hover:bg-secondary/20 flex items-center justify-center flex-shrink-0 transition-colors">
-                    <FaWhatsapp className="text-secondary text-sm" />
-                  </div>
-                  <a href="https://wa.me/97126765576" className="text-sm text-gray-400 hover:text-secondary transition-colors">
-                    +971 2 6765576 (WhatsApp)
                   </a>
                 </div>
               </div>
