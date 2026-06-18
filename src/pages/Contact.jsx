@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane, FaCheckCircle, FaUserMd, FaClipboardList } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane, FaCheckCircle, FaUserMd, FaClipboardList, FaSpinner } from 'react-icons/fa';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -18,6 +18,7 @@ const staggerContainer = {
 export default function Contact() {
   const ref = useRef(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState({
     contactPerson: '',
     phone: '',
@@ -28,18 +29,38 @@ export default function Contact() {
   const mapAddress = "Elite Dental Fabrication Lab, galleria cafe bluiding - 201 شارع دلما - Al Nahyan - E25 - Abu Dhabi - United Arab Emirates";
   const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapAddress)}&output=embed`;
   const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`;
+  const apiUrl = import.meta.env.VITE_API_URL || "/api/contact";
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormSubmitted(true);
-    setTimeout(() => setFormSubmitted(false), 3000);
-    setFormData({
-      contactPerson: '',
-      phone: '',
-      email: '',
-      message: ''
-    });
+    setIsSending(true);
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const responseText = await response.text();
+        throw new Error(`Failed to send enquiry (${response.status}): ${responseText}`);
+      }
+
+      setFormSubmitted(true);
+      setTimeout(() => setFormSubmitted(false), 3000);
+      setFormData({
+        contactPerson: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Contact submit error:", error);
+      alert(`Unable to send enquiry. Please try again later. ${error.message}`);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -241,12 +262,18 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-secondary text-white py-3.5 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group"
+                disabled={isSending}
+                className="w-full bg-primary hover:bg-secondary disabled:cursor-not-allowed disabled:opacity-60 text-white py-3.5 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group"
               >
                 {formSubmitted ? (
                   <>
                     <FaCheckCircle className="text-lg" />
                     <span>Request Sent!</span>
+                  </>
+                ) : isSending ? (
+                  <>
+                    <FaSpinner className="text-lg animate-spin" />
+                    <span>Sending...</span>
                   </>
                 ) : (
                   <>
