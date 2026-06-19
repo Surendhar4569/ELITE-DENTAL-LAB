@@ -163,9 +163,9 @@ export default function Contact() {
                   <a href="mailto:admin@elitedentaluae.com" className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors block mt-1">
                     admin@elitedentaluae.com
                   </a>
-                  <a href="mailto:saadalzarif81@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors block">
+                  {/* <a href="mailto:saadalzarif81@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors block">
                     saadalzarif81@gmail.com
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </motion.div>

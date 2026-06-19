@@ -172,14 +172,14 @@ export default function Footer() {
                     admin@elitedentaluae.com
                   </a>
                 </div>
-                <div className="flex items-center gap-3 group">
+                {/* <div className="flex items-center gap-3 group">
                   <div className="w-8 h-8 rounded-lg bg-gray-800 group-hover:bg-secondary/20 flex items-center justify-center flex-shrink-0 transition-colors">
                     <FaEnvelope className="text-secondary text-sm" />
                   </div>
                   <a href="mailto:saadalzarif81@gmail.com" className="text-sm text-gray-400 hover:text-secondary transition-colors break-all">
                     saadalzarif81@gmail.com
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </motion.div>
